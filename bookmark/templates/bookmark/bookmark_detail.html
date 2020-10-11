@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-{{object.site_name}}<br/>
-{{object.url}}<br/>
-<input type="button" value="Back" onclick="history.back()">
-<input type="button" value="Home" onclick="location.href={% url 'list' %}">
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    Detail
+{% endblock %}
+
+{% block content %}
+    {{object.site_name}}<br/>
+    {{object.url}}
+
+{% endblock %}
