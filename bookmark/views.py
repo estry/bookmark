@@ -10,6 +10,7 @@ from .models import Bookmark
 
 class BookMarkListView(ListView):
     model = Bookmark
+    paginate_by = 6
 
 
 class BookmarkCreateView(CreateView):
@@ -27,6 +28,7 @@ class BookmarkUpdateView(UpdateView):
     model = Bookmark
     fields = ['site_name', 'url']
     template_name_suffix = '_update'
+
 
 class BookmarkDeleteView(DeleteView):
     model = Bookmark
